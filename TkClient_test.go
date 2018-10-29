@@ -30,5 +30,10 @@ func TestTkClient_SendOrder(t *testing.T) {
 func TestTkClient_SendLogInfo(t *testing.T) {
 	client:=NewTkClient(http.DefaultClient,"","")
 	client.SendLogInfo("api_test","1","api test","1234")
-	time.Sleep(time.Second)
+
+}
+
+func TestRetry(t *testing.T) {
+	client:=NewTkClient(http.DefaultClient,"","")
+	Retry(client.SendLogInfo,"api_test","1","api test","1234")
 }
