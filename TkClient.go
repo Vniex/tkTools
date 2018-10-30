@@ -12,7 +12,7 @@ import (
 
 const (
 	HEART_BEAT=2
-	API_URL="http://127.0.0.1:8888/api/v1/"
+	API_URL="http://120.78.158.126:5007/api/v1/"
 
 	TEST_URI=API_URL+"test"
 	ASSET_URI=API_URL+"asset"
@@ -54,7 +54,7 @@ func (c *TkClient)SendTestMsg(){
 		if err = json.Unmarshal(resp, &respmap);err!=nil{
 			log.Println(err)
 		}else{
-			log.Println(respmap)
+			//log.Println(respmap)
 		}
 
 	}
@@ -78,7 +78,7 @@ func (c *TkClient)SendAsset(robot_name,net_asset,time_stamp string)error{
 			log.Println(err)
 			return err
 		}else{
-			log.Println(respmap)
+			//log.Println(respmap)
 		}
 
 	}
@@ -109,7 +109,7 @@ func (c *TkClient)SendOrder(robot_name,price,amount,avg_price,fee,order_id,order
 			log.Println(err)
 			return err
 		}else{
-			log.Println(respmap)
+			//log.Println(respmap)
 		}
 
 	}
@@ -136,7 +136,7 @@ func (c *TkClient)SendLogInfo(robot_name,level,msg,timestamp string ) error{
 			log.Println(err)
 			return err
 		}else{
-			log.Println(respmap)
+			//log.Println(respmap)
 		}
 
 	}
